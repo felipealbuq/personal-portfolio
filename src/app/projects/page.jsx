@@ -38,7 +38,7 @@ const projectsData = [
     description: "Articulated 3D robot with textures, shading, and animations, ready for action in your Blender project or game",
     image: "/images/projects/BelchiorRobot.png",
     tag: ["All", "Blender"],
-    gitUrl: "https://github.com/felipealbuq/personal-portfolio",
+    gitUrl: "https://github.com/felipealbuq/belchior-robot",
     previewUrl: "/videos/projects/BelchiorRobot-HD.mp4"
   },
   {
