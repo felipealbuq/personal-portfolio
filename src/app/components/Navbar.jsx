@@ -35,8 +35,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute sm:fixed mx-auto border-b border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-0">
-      <div className="flex flex-wrap items-center justify-between mx-auto px-4 max-h-18">
+    <nav className="fixed mx-auto border-b border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-0">
+      <div className="flex flex-wrap items-center justify-between mx-auto px-0 md:px-4 lg:px-4 max-h-18">
         <Link href={"/"}>
           <Image
             src="/images/logo.png"
@@ -49,11 +49,11 @@ const Navbar = () => {
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
-            <button onClick={() => setNavbarOpen(true)} className="flex items-center px-3 py-2 mr-1 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white">
+            <button onClick={() => setNavbarOpen(true)} className="flex items-center px-3 py-2 mr-5 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white">
               <Bars3Icon className="h-5 w-5" />
             </button>
           ) : (
-            <button onClick={() => setNavbarOpen(false)} className="flex items-center px-3 py-2 mr-1 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white">
+            <button onClick={() => setNavbarOpen(false)} className="flex items-center px-3 py-2 mr-5 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white">
               <XMarkIcon className="h-5 w-5" />
             </button>
           )}

@@ -19,16 +19,6 @@ export default function StarsModel() {
   ]);
   const numCubes = 700;
 
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" && window.innerWidth < 640
-  )
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 640);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   useState(() => {
     for (let i = 1; i < numCubes; i++) {
       setBoxes((prevBoxes) => [...prevBoxes, { position: generateRandomPosition() }]);
@@ -42,7 +32,7 @@ export default function StarsModel() {
         backgroundColor: "#121212",
         width: "100%",
         height: "92px",
-        position: isMobile ? "absolute" : "fixed", // Dynamic position based on state
+        position: "fixed" // Dynamic position based on state
       }}
     >
       <ambientLight intensity={1.5} />

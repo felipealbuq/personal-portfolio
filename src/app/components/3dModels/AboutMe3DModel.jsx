@@ -46,7 +46,9 @@ const AboutMe3DModel = () => {
         <AboutMe3D scale={0.22} position={[0, 0, 0]}/>
       </Suspense>
       <OrbitControls
-        enableZoom={true}/>
+        enableZoom={false}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI/2}/>
     </Canvas>
   );
 };
