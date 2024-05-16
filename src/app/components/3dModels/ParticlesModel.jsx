@@ -17,7 +17,7 @@ export default function StarsModel() {
   const [boxes, setBoxes] = useState([
     { position: [0, 0, 5] },
   ]);
-  const numCubes = 700;
+  const numCubes = 1000;
 
   useState(() => {
     for (let i = 1; i < numCubes; i++) {
