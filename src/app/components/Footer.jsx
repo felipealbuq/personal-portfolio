@@ -9,7 +9,7 @@ const Footer = () => {
     <footer
       className="footer fixed border-t border-[#33353F] bottom-0 left-0 w-full h-16 bg-[#121212] text-white"
     >
-      <div className="flex flex-wrap items-center justify-between mx-auto px-4 py-2">
+      <div className="flex flex-wrap items-center justify-between mx-auto px-0 md:px-4 lg:px-4 py-2">
         <span>
           <Link href={"#"}>
             <Image
