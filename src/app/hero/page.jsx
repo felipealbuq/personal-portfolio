@@ -64,7 +64,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="col-span-5 place-self-center mt-6 sm:mt-32 lg:mt-2">
-              <div className="text-lg lg:text-xl text-center text-[#ADB7BE] md:mt-16 sm:py-3 md:p-2 lg:mt-16 lg:p-2">Drag Your Mouse And Ilumine Me!</div>
+              <div className="text-lg lg:text-xl text-center text-[#ADB7BE] md:mt-16 sm:py-3 md:p-2 lg:mt-16 lg:p-2">Drag your mouse and ilumine me!</div>
               <div className="rounded-full bg-[#181818] w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] relative">
                 <FelipeModel />
               </div>
