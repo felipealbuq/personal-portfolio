@@ -32,7 +32,7 @@ export default function StarsModel() {
         backgroundColor: "#121212",
         width: "100%",
         height: "92px",
-        position: "fixed" // Dynamic position based on state
+        position: "fixed"
       }}
     >
       <ambientLight intensity={1.5} />

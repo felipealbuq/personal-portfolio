@@ -21,7 +21,7 @@ const Footer = () => {
             />
           </Link>
         </span>
-        <div className="socials flex flex-row gap-2">
+        <div className="socials flex flex-row gap-2 mr-2 md:mr-0 lg:mr-0">
             <Link href="https://github.com/felipealbuq">
               <Image src={GithubIcon} alt="Github Icon" />
             </Link>
