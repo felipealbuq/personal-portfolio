@@ -8,7 +8,7 @@ const AboutMe3D = ({ ...props }) => {
   const mixer = useRef();
   const { camera } = useThree();
   const [zoomDirection, setZoomDirection] = useState(0.01); 
-  const zoomSpeed = 1.8;
+  const zoomSpeed = 2.5;
   let clock = new THREE.Clock()
 
   useFrame(() => {
