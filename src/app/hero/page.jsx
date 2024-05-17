@@ -12,6 +12,10 @@ function downloadPDF() {
 }
 
 const Hero = () => {
+  const handleHireMeClick = () => {
+    const event = new CustomEvent('hireMeClick');
+    window.dispatchEvent(event);
+  };
 
   return (
     <main className="flex min-h-screen flex-col bg-[#121212] justify-center items-center">
@@ -49,6 +53,7 @@ const Hero = () => {
                 <Link
                   href="/contact"
                   className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white"
+                  onClick={handleHireMeClick}
                 >
                   Hire Me
                 </Link>

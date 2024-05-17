@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import NavLink from './NavLink';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
@@ -27,12 +27,24 @@ const navLinks = [
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("/"); 
+  const [activeTab, setActiveTab] = useState("/");
 
   const handleTabChange = (path) => {
     setActiveTab(path);
     setNavbarOpen(false);
   };
+
+  useEffect(() => {
+    const handleHireMeClick = () => {
+      setActiveTab("/contact");
+    };
+
+    window.addEventListener('hireMeClick', handleHireMeClick);
+
+    return () => {
+      window.removeEventListener('hireMeClick', handleHireMeClick);
+    };
+  }, []);
 
   return (
     <nav className="fixed mx-auto border-b border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-0">

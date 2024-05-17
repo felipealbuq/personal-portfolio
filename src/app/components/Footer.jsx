@@ -11,7 +11,6 @@ const Footer = () => {
     >
       <div className="flex flex-wrap items-center justify-between mx-auto px-0 md:px-4 lg:px-4 py-2">
         <span>
-          <Link href={"#"}>
             <Image
               src="/images/logo.png"
               alt="logo"
@@ -19,7 +18,6 @@ const Footer = () => {
               height={10}
               className="mt-0 ml-2" 
             />
-          </Link>
         </span>
         <div className="socials flex flex-row gap-2 mr-3 md:mr-0 lg:mr-0">
             <Link href="https://github.com/felipealbuq">
