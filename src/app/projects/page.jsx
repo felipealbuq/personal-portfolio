@@ -37,7 +37,7 @@ const projectsData = [
     title: "Belchior Robot",
     description: "Articulated 3D robot with textures, shading, and animations, ready for action in your Blender project or game",
     image: "/images/projects/BelchiorRobot.png",
-    tag: ["All", "Blender"],
+    tag: ["All", "Blender", "ThreeJS"],
     gitUrl: "https://github.com/felipealbuq/belchior-robot",
     previewUrl: "/videos/projects/BelchiorRobot-HD.mp4"
   },
@@ -46,7 +46,7 @@ const projectsData = [
     title: "War Helicopter",
     description: "3D helicopter with crafted animations, including smooth takeoffs, and precise landings, complemented by realistic textures and shading",
     image: "/images/projects/warHelicopter.png",
-    tag: ["All", "Blender"],
+    tag: ["All", "Blender", "ThreeJS"],
     gitUrl: "https://github.com/felipealbuq/personal-portfolio",
     previewUrl: "/images/projects/5.png"
   },
