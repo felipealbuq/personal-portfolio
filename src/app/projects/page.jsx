@@ -7,15 +7,6 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/2.png",
-    tag: ["All", "Unity"],
-    gitUrl: "https://github.com/felipealbuq/personal-portfolio",
-    previewUrl: "/images/projects/3.png"
-  },
-  {
-    id: 2,
     title: "Interactive A-Frame Mini Game",
     description: "Mini Game developed in A-frame with movements, animations and physics colliders",
     image: "/images/projects/A-frame-mini-game.png",
@@ -24,7 +15,7 @@ const projectsData = [
     previewUrl: "/videos/projects/A-frame-mini-game-HD.mp4"
   },
   {
-    id: 3,
+    id: 2,
     title: "GAVIA",
     description: "Virtual enviroment created by Generative AI and available for virtual reality",
     image: "/images/projects/GAVIA.png",
@@ -33,7 +24,7 @@ const projectsData = [
     previewUrl: "/videos/projects/GAVIA-720p.mp4"
   },
   {
-    id: 4,
+    id: 3,
     title: "Belchior Robot",
     description: "Articulated 3D robot with textures, shading, and animations, ready for action in your Blender project or game",
     image: "/images/projects/BelchiorRobot.png",
@@ -42,23 +33,14 @@ const projectsData = [
     previewUrl: "/videos/projects/BelchiorRobot-HD.mp4"
   },
   {
-    id: 5,
+    id: 4,
     title: "War Helicopter",
     description: "3D helicopter with crafted animations, including smooth takeoffs, and precise landings, complemented by realistic textures and shading",
     image: "/images/projects/warHelicopter.png",
     tag: ["All", "Blender", "ThreeJS"],
     gitUrl: "https://github.com/felipealbuq/personal-portfolio",
     previewUrl: "/images/projects/5.png"
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Blender"],
-    gitUrl: "https://github.com/felipealbuq/personal-portfolio",
-    previewUrl: "/images/projects/6.png"
-  },
+  }
 ];
 
 const Projects = () => {
@@ -91,7 +73,7 @@ const Projects = () => {
             name="All"
             isSelected={tag === "All"}
           />
-          <ProjectTag
+          {/* <ProjectTag
             onClick={handleTagChange}
             name="Unity"
             isSelected={tag === "Unity"}
@@ -100,7 +82,7 @@ const Projects = () => {
             onClick={handleTagChange}
             name="Unreal"
             isSelected={tag === "Unreal"}
-          />
+          /> */}
           <ProjectTag
             onClick={handleTagChange}
             name="A-frame"
