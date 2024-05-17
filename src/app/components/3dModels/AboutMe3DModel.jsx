@@ -10,7 +10,7 @@ const AboutMe3DModel = () => {
   useEffect(() => {
     function handleResize() {
       if (typeof window !== 'undefined' && window.innerWidth <= 768) {
-        setCanvasSize({ width: '320px', height: '450px' });
+        setCanvasSize({ width: '320px', height: '400px' });
       } else {
         setCanvasSize({ width: '500px', height: '500px' });
       }
