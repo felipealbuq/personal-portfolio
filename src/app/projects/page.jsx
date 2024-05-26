@@ -38,8 +38,8 @@ const projectsData = [
     description: "3D helicopter with crafted animations, including smooth takeoffs, and precise landings, complemented by realistic textures and shading",
     image: "/images/projects/warHelicopter.png",
     tag: ["All", "Blender", "ThreeJS"],
-    gitUrl: "https://github.com/felipealbuq/personal-portfolio",
-    previewUrl: "/images/projects/5.png"
+    gitUrl: "https://github.com/felipealbuq/war-helicopter",
+    previewUrl: "/videos/projects/WarHelicopter-HD.MP4"
   }
 ];
 
@@ -99,7 +99,7 @@ const Projects = () => {
             isSelected={tag === "Blender"}
           />
         </div>
-        <ul ref={ref} className="grid md:grid-cols-2 gap-8 md:gap-12 ">
+        <ul ref={ref} className="grid md:grid-cols-2 gap-8 md:gap-10 ">
           {filteredProjects.map((project, index) => (
             <motion.li
               key={index}

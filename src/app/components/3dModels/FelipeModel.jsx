@@ -1,52 +1,61 @@
-import React, { Suspense, useRef, useState } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Vector3 } from 'three';
-import Felipe from '../3dObjects/Felipe';
+import React, { Suspense, useEffect, useState, useRef } from 'react'
+import { Canvas } from '@react-three/fiber'
+import Felipe from '../3dObjects/Felipe'
+
+const getRandomColor = () => {
+  const letters = '0123456789ABCDEF'
+  let color = '#'
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)]
+  }
+  return color
+};
 
 const FelipeModel = () => {
-  const [mousePosition, setMousePosition] = useState(new Vector3(0, 0, 0));
+  const [lightIntensity, setLightIntensity] = useState(5);
+  const [lightColor, setLightColor] = useState('#fff')
+  const audioRef = useRef(null);
 
-  const handleMouseMove = (event) => {
-    const { clientX, clientY } = event;
-    setMousePosition(
-      new Vector3(
-        (clientX / window.innerWidth) * 2 - 1,
-        -(clientY / window.innerHeight) * 2 + 1,
-        10
-      )
-    );
-  };
+
+  const handleClick = () => {
+    setLightIntensity(10.0)
+
+    audioRef.current && audioRef.current.play();
+  }
+
+  useEffect(() => {
+    let colorInterval
+    lightIntensity === 10.0 && (colorInterval = setInterval(() => {
+      setLightColor(getRandomColor())
+    }, 100));    
+    return () => clearInterval(colorInterval)
+  }, [lightIntensity])
 
   return (
-    <Canvas
-      shadows
-      camera={{ position: [2, 0, 12.25], fov: 15 }}
-      style={{
-        backgroundColor: 'transparent',
-        width: '100%',
-        height: '100%',
-      }} 
-      onPointerMove={handleMouseMove}
-    >
-      <ambientLight intensity={1.5} />
-      <Suspense fallback={null}>
-        <MouseControlledDirectionalLight mousePosition={mousePosition} />
-        <Felipe scale={1.65} position={[-0.38, -1.3, 1]} />
-      </Suspense>
-    </Canvas>
-  );
+    <>
+      <audio ref={audioRef} src="/music/sitBack.mp3" loop />
+      <Canvas
+        shadows
+        camera={{ position: [2, 0, 12.25], fov: 15 }}
+        style={{
+          backgroundColor: 'transparent',
+          width: '100%',
+          height: '100%',
+        }}
+        onClick={handleClick}
+      >
+        <ambientLight intensity={0.5} />
+        <Suspense fallback={null}>
+          <DirectionalLightWithState intensity={lightIntensity} color={lightColor} />
+          <Felipe scale={1.65} position={[-0.38, -1.3, 1]} />
+        </Suspense>
+      </Canvas>
+    </>
+  )
+}
+
+const DirectionalLightWithState = ({ intensity, color }) => {
+  return <directionalLight color={color} intensity={intensity} position={[0, 8, 10]} />
 };
 
-const MouseControlledDirectionalLight = ({ mousePosition }) => {
-  const directionalLightRef = useRef();
-
-  useFrame(() => {
-    if (directionalLightRef.current && mousePosition) {
-      directionalLightRef.current.position.copy(mousePosition);
-    }
-  });
-
-  return <directionalLight intensity={5.0} ref={directionalLightRef} />;
-};
-
-export default FelipeModel;
+export default FelipeModel
