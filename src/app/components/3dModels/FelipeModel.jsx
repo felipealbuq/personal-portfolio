@@ -33,7 +33,7 @@ const FelipeModel = () => {
 
   return (
     <>
-      <audio ref={audioRef} src="/music/sitBack.mp3" loop />
+      <audio ref={audioRef} src="/music/sitBackSong.mp3" loop />
       <Canvas
         shadows
         camera={{ position: [2, 0, 12.25], fov: 15 }}
