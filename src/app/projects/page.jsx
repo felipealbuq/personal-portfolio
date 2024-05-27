@@ -39,7 +39,7 @@ const projectsData = [
     image: "/images/projects/warHelicopter.png",
     tag: ["All", "Blender", "ThreeJS"],
     gitUrl: "https://github.com/felipealbuq/war-helicopter",
-    previewUrl: "/videos/projects/WarHelicopter-HD.MP4"
+    previewUrl: "/videos/projects/WarHelicopter-HD.mp4"
   }
 ];
 
