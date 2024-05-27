@@ -16,7 +16,7 @@ const BallonModel = () => {
       <ambientLight intensity={1.5} />
       <directionalLight intensity={5.0} position={[0, 8, 5]}/>
       <Suspense fallback={null}>
-        <Ballon scale={2.2} position={[2.15, 0.18, 0]} />
+        <Ballon scale={2.2} position={[1.2, 0.18, 0]} />
       </Suspense>
     </Canvas>
   );
