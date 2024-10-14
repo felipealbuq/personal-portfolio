@@ -7,8 +7,8 @@ import BallonModel from '../components/3dModels/BallonModel';
 
 function downloadPDF() {
   const link = document.createElement('a');
-  link.href = `/pdfs/felipeResume2024.pdf`;
-  link.download = 'felipeResume2024.pdf';
+  link.href = `/pdfs/webDeveloperFelipeAlbuquerque.pdf`;
+  link.download = 'webDeveloperFelipeAlbuquerque.pdf';
   link.click();
 }
 
